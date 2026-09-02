@@ -6,9 +6,7 @@ export default function TopBar({ onNewTask, onNewColumn, onOpenSettings }) {
   return (
     <div className="h-14 shrink-0 border-b border-border flex items-center justify-between px-5 bg-surface">
       <div className="flex items-center gap-2.5">
-        <div className="w-7 h-7 rounded-lg bg-accent-dim flex items-center justify-center">
-          <span className="text-accent text-sm font-bold">◆</span>
-        </div>
+        <img src="/logo.png" alt="Pathwise logo" className="w-7 h-7 rounded-lg object-cover" />
         <span className="font-semibold text-[15px] tracking-tight">Pathwise</span>
       </div>
 
