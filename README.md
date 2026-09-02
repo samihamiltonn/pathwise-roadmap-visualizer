@@ -2,7 +2,7 @@
 
 A concept tool for planning work as a dependency graph, then managing that same work as a kanban board, both views share one source of truth, so moving a task in the board updates it in the graph and vice versa.
 
-**[Live demo →](#)** *(add once deployed)*
+**[Live demo →]([#](https://pathwise-roadmap-visualizer-ku5dj5ks4-sami-hamilton.vercel.app/))**
 
 ## Features
 
