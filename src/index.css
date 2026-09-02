@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Avenir', 'Avenir Next', 'Poppins', -apple-system, sans-serif;
+
+  --color-bg: #0B0D12;
+  --color-surface: #14171D;
+  --color-surface-raised: #1C2029;
+  --color-surface-hover: #232833;
+  --color-border: #262B35;
+  --color-ink: #F4F5F7;
+  --color-muted: #8B93A5;
+  --color-accent: #7C7BFF;
+  --color-accent-dim: rgba(124, 123, 255, 0.14);
+  --color-cyan: #3ECFEB;
+  --color-cyan-dim: rgba(62, 207, 235, 0.14);
+  --color-amber: #F5A623;
+  --color-amber-dim: rgba(245, 166, 35, 0.14);
+  --color-coral: #FF6B5E;
+  --color-coral-dim: rgba(255, 107, 94, 0.14);
+  --color-green: #3ECF8E;
+  --color-green-dim: rgba(62, 207, 142, 0.14);
+  --color-slate: #8B93A5;
+  --color-slate-dim: rgba(139, 147, 165, 0.14);
+  --color-pink: #F76FB0;
+  --color-pink-dim: rgba(247, 111, 176, 0.14);
+  --color-canvas-dot: #1C2029;
+  --color-edge: #3A4150;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #F4F5F7;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #F7F8FA;
+  --color-surface-hover: #EEF0F3;
+  --color-border: #E2E5EA;
+  --color-ink: #14171D;
+  --color-muted: #6B7280;
+  --color-canvas-dot: #D5D9E0;
+  --color-edge: #B8BEC9;
+  --color-accent-dim: rgba(124, 123, 255, 0.12);
+  --color-cyan-dim: rgba(62, 207, 235, 0.12);
+  --color-amber-dim: rgba(245, 166, 35, 0.12);
+  --color-coral-dim: rgba(255, 107, 94, 0.12);
+  --color-green-dim: rgba(62, 207, 142, 0.12);
+  --color-slate-dim: rgba(139, 147, 165, 0.12);
+  --color-pink-dim: rgba(247, 111, 176, 0.12);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2A2F3A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #363C49; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeIn 0.2s ease both; }
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -20; }
+}
+.edge-flow {
+  stroke-dasharray: 4 4;
+  animation: dashFlow 1s linear infinite;
+}
